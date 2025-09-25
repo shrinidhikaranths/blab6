@@ -25,7 +25,7 @@ function addStudent(id,name,age){
     if(isNaN(age)||age<=0){
         throw new Error('age must be positive');
     }
-    const studentExists=students.some(student=>student.id==id);
+    const studentExists=students.some(student=>student.id===id);
     if(studentExists){
         throw new Error('student id already exists');
     }
